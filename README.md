@@ -72,13 +72,14 @@ Now, following the recursive code we see that at n=5, the value of dp[5] is equa
 
 As we traverse back after solving n=2, we update its dp array value to 1 ( the answer we got). Similarly, for the second recursive call for n=3, we again hit a base condition and we get an answer of f(n=3) as 2, we again update the dp array.
 
+![image](https://user-images.githubusercontent.com/57504080/156421532-1bad91c4-a2c3-46a7-9d6f-7e82daa36488.png)
 
 
 Then for the second recursive call f(n=4), we see that dp[2] is not equal to -1, which means that we have already solved this subproblem and we simply return the value at dp[2] as our answer. Hence we get the answer of f(n=4) as 3(2+1).
 
 Similarly, for the second recursive call f(n=5), we get dp[3] as 2. Then we compute for(n=5) as 5(2+3).
 
-
+![image](https://user-images.githubusercontent.com/57504080/156421583-abb8dd89-563a-4bca-8703-1c1813002edb.png)
 
 Code:
 
@@ -161,7 +162,7 @@ we see that for any i, we do need only the last two values in the array. So is t
 
 The answer is ‘No’. Let us call dp[i-1] as prev and dp[i-2] as prev2. Now understand the following illustration.
 
-
+ ![image](https://user-images.githubusercontent.com/57504080/156421748-a6f629bb-8295-4e75-91a5-2ed700892d1c.png)
 
 Each iteration’s cur_i and prev becomes the next iteration’s prev and prev2 respectively.
 Therefore after calculating cur_i, if we update prev and prev2 according to the next step, we will always get the answer. 
