@@ -1,4 +1,4 @@
-//Using Tabulation
+//Using Tabulation Method
 #include<bits/stdc++.h>
 using namespace std;
 
